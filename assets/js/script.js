@@ -1,81 +1,49 @@
-  // select countdown container
-  const countContainer = document.getElementById("countdown-number");
-  
-  // select action buttons
-  const startButton = document.getElementById("start");
-  const stopButton = document.getElementById("stop");
-  const resetButton = document.getElementById("reset");
-  
-  // select timeout Audio element
-  const timeoutAudio = document.getElementById("timeout_audio");
-  
-  // variable to store count
-  var remainingTime = 240;
-  
-  // variable to store time interval
-  var timer;
-  
-  // variable to track whether timer is running or not
-  var isStopped = true;
-  
-  // function to start Timer
-  const startTimer = () => {
-    if (isStopped) {
-      isStopped = false;
-      countContainer.innerHTML = remainingTime;
-      timer = setInterval(renderTime, 1000);
-    }
-  };
-  
-  // function to stop timer
-  const stopTimer = () => {
-    isStopped = true;
-    if (timer) {
-      clearInterval(timer);
-    }
-  };
-  
-  // function to reset timer
-  const resetTimer = () => {
-    isStopped = true;
-    clearInterval(timer);
-    remainingTime = 240;
-    countContainer.innerHTML = remainingTime;
-  };
-  
-  // initialize timeout sound
-  timeoutAudio.src = "http://soundbible.com/grab.php?id=1252&type=mp3";
-  timeoutAudio.load();
-  
-  // attach onclick event to buttons
-  startButton.onclick = startTimer;
-  resetButton.onclick = resetTimer;
-  stopButton.onclick = stopTimer;
-  
-  // function to display time
-  const renderTime = () => {
-    // decement time
-    remainingTime -= 1;
-    // render count on the screen
-    countContainer.innerHTML = remainingTime;
-    // timeout on zero
-    if (remainingTime === 0) {
-      isStopped = true;
-      clearInterval(timer);
-      // Play audio on timeout
-      timeoutAudio.play();
-      remainingTime = 240;
-    }
-  };
-  
-  var button = document.getElementById('start')
-  button.addEventListener('click',hideshow,false);
-  
-  function hideshow() {
-      document.getElementById('welcome-message').style.display = 'block'; 
-      this.style.display = 'none'
-  };
-  
+// time and score
+let timeEl = document.querySelector("p.time");
+let secondsLeft = 60;
+let scoreEl = document.querySelector("#score");
+
+// welcome message
+const welcomeEl = document.querySelector("#welcome");
+
+// quiz section
+const questionsEl = document.querySelector("#questions");
+// questions populate here
+let questionEl = document.querySelector("#question");
+// question count
+let questionCount = 0;
+// display whether response is correct or incorrect
+const valid = document.querySelector("#valid");
+
+// quiz complete section
+const completeEl = document.querySelector("#complete");
+// high score initials
+let initialsEl = document.querySelector("#initials");
+// high score section
+const highScoresEl = document.querySelector("#highscores");
+// list of scores
+let scoreListEl = document.querySelector("#score-list");
+// array of all scores
+let scoreList = [];
+
+//buttons
+// start
+const startBtn = document.querySelector("#start");
+// answer button class
+const ansBtn = document.querySelectorAll("button.ansBtn");
+// answers
+const ans1Btn = document.querySelector("#answer1");
+const ans2Btn = document.querySelector("#answer2");
+const ans3Btn = document.querySelector("#answer3");
+const ans4Btn = document.querySelector("answer4");
+// submit score
+const submitScrBtn = document.querySelector("#submit-score");
+// return
+const returnBtn = document.querySelector("#return");
+// reset scores
+const resetBtn = document.querySelector("#resetscores");
+// check scores
+const viewBtn = document.querySelector("#view-scores");
 
 const questions = [ 
     { question: "Inside which HTML element do we put the JavaScript?",
