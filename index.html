@@ -39,7 +39,7 @@
     <!-- Instructions -->
     <section id="welcome">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-9" id="welcome-box">
+        <div class="col-12 col-md-9 welcome-box">
             <h1 class="d-flex justify-content-center text-center"> JAVASCRIPT CODE QUIZ</h1>
             <p class="d-flex justify-content-center text-center">Hi there, and welcome to the JavaScript Code Quiz! </p>
             <p class="class="d-flex justify-content-center text-center">
@@ -51,7 +51,7 @@
     </section>  
 
 <!-- questions & answers section -->
-    <section id="questions">
+    <section id="questions" class="welcome-box">
         <div class="row justify-content-center">
             <div class="col-12 col-md-9">
             <h2 id="question">Placeholder Question</h2>
@@ -70,9 +70,9 @@
     </section>
 
     <!-- final score and initials input -->
-    <section id="final">
+    <section id="complete" class="welcome-box">
         <div class="row justify-content-center">
-            <div class="col-6">
+            <div class="col-12 col-md-9">
                 <h2>Quiz Complete!</h2>
                 <p>Let's see how you did. Your final score is: <span id="score" class="pl-1">0</span></p>
                 <p>Enter Your Initials: <span class="ml-1"><input placeholder="initials" id="initials" /></span>
@@ -83,15 +83,16 @@
 
     <!-- high score section -->
     <section id="highscores">
-        <div class="row justify-content-center">
-            <div class="col-6">
-                <h2>High Scores</h2>
+        <div class="row justify-content-center welcome-box">
+            <div class="col-12 col-md-9">
+                <h2>LEADERBOARD</h2>
                 <ol id="score-list"></ol>
-                <button id="return" class="btn btn-success d-inline-block mx-1 my-1">Return</button>
-                <button id="resetscores" class="btn btn-success mx-1 my-1 d-inline-block">Reset Scores</button>
+                <button id="go-back" class="btn btn-success d-inline-block mx-1 my-1">Try Again</button>
+                <button id="reset-scores" class="btn btn-success mx-1 my-1 d-inline-block">Reset Scores</button>
             </div>
         </div>
     </section>
+    </div>
 </main>
 <!-- JavaScript -->
     <script type="text/javascript" src="assets/js/script.js"> </script>
