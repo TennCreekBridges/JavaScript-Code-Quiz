@@ -47,4 +47,7 @@ button:hover {
     background-color: white;
 }
 
+ul {
+    list-style: none;
+}
 
