@@ -1,9 +1,3 @@
-$(document).ready(function(){
-    $("startButton").click(function(){
-      $("welcome-message").hide();
-    });
-  });
-  
   // select countdown container
   const countContainer = document.getElementById("countdown-number");
   
@@ -81,67 +75,6 @@ $(document).ready(function(){
       document.getElementById('welcome-message').style.display = 'block'; 
       this.style.display = 'none'
   };
-  
-  const question = document.querySelector('.question');
-  const Option1 = document.querySelector('#option1');
-  const Option2 = document.querySelector('#option2');
-  const Option3 = document.querySelector('#option3');
-  const Option4 = document.querySelector('#option4');
-  const Submit = document.querySelector('#submit');
-  const answers = document.querySelectorAll('.answer');
-  const totalScore = document.querySelector('#showScore');
-  let score= 0;
-  
-  let questionCount = 0;
-  let quizDB = "";
-  const loadQuestions = () => {
-     const questionList = quizDB[questionCount];
-     question.innerText = questions.question;
-     Option1.innerText = questions.a;
-     Option2.innerText = questions.b;
-     Option3.innerText = questions.c;
-     Option4.innerText = questions.d;
-  }
-  loadQuestions();
-  
-  const getCheckAnswer = () => {
-    let answer;
-    answers.forEach(currenAns => {
-        if(currenAns.checked){
-            answer = currenAns.id;
-        }
-    });
-    return answer;
-  };
-  
-  const deSelectAll = () => {
-    answers.forEach((currenAns)=>{
-        currenAns.checked = false;
-    })
-  }
-  
-  Submit.addEventListener('click', () => {
-    const checkAnswer = getCheckAnswer();
-    
-    if(checkAnswer === quizDB[questionCount].ans){
-        score++;
-    };
-  
-    questionCount++;
-  
-    deSelectAll();
-    if(questionCount < qiuzDB.length){
-        loadQuestions();
-    }
-    else{
-        
-        totalScore.classList.remove('scoreArea');
-        totalScore.innerHTML = `<h3>Your total score is :<span id='score'>${score}</span></h3>
-        <button class = 'btn' onclick='location.reload()' >Try again?</button>`;
-    }
-  });
-  
-  
   
 
 const questions = [ 
