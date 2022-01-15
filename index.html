@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Code Quiz</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<audio id="timeout_audio"></audio>
+</head>
+<body>
+    <header>
+        <h1>JAVASCRIPT CODE QUIZ</h1>
+    </header>
+
+<!-- begin timer section     -->
+<h2>Countdown Timer</h2>
+<section id="countdown">
+    <div id="countdown-number">240</div>
+  </div>
+</section>
+  <div class="action-list">
+    <button id="stop" class="btnCtrl">
+      <img src="Assets/images/stop.png" alt="stop" />
+    </button>
+    <button id="start" class="btnCtrl">
+      <img src="Assets/images/play.png" alt="play" />
+    </button>
+    <button id="reset" class="btnCtrl">
+      <img src="Assets/images/reset.png" alt="reset" />
+    </button>
+  </div>
+
+<!-- begin quiz box section  -->
+    <section id ="welcome">
+        <div id="welcome-message">
+            <p>Hi there, and welcome to the JavaScript Code Quiz!</p><br/>
+            <p>You will have 240 seconds to complete the quiz. If you answer a question incorrectly, twenty seconds will be removed from your time. If you complete the quiz ahead of time, you will receive five bonus points for each second remaining. Answers cannot be changed after they are submitted, so choose carefully.</p><br/>
+            <p>Press 'PLAY' button above to begin - GOOD LUCK!</p>
+        </div>
+    </section>
+
+    <section id="quizCont">
+      <div class="inner-div">
+          <h2 class="question">Questions Appear HERE </h2>
+          <ul id="quizItems">
+              <li>
+                  <button type="button" name="answer" id="ans1" class="ansButton">Answer 1</button>
+              </li>
+              <li>
+                  <button type="button" name="answer" id="ans2" class="ansButton">Answer 2</button>
+              </li>
+              <li>
+                  <button type="button" name="answer" id="ans3" class="ansButton">Answer 3</button>
+              </li>
+              <li>
+                  <button type="button" name="answer" id="ans4" class="ansButton">Answer 4</button>
+              </li>
+          </ul>
+
+          <div id="showScore" class="scoreArea">
+
+          </div>
+      </div>
+    </section>
+
+  <h2>View High Scores</h2>
+
+
+
+    <script type="text/Javascript" src="assets/JS/script.js"></script>
+    <script type="text/Javascript" src="assets/JS/questions.js"><script>
+</body>
+</html>
