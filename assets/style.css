@@ -43,11 +43,27 @@ H2 {
     font-size: 1.2rem;
 }
 
-button:hover {
-    background-color: white;
+.btn {
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
+    border: none;
+}
+
+
+.btn:hover {
+    /* background-color: white !important; */
+    background-color: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
 }
 
 ul {
     list-style: none;
 }
 
+#timer {
+    font-size: 1.8rem;
+}
+
+.col-6 {
+    padding: 0 !important;
+}

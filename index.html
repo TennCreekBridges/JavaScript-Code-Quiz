@@ -20,14 +20,14 @@
 
 <body>
     <!-- scores & time at top of page -->
-    <header class="conatiner-fluid mb-5">
+    <header class="container-fluid mb-2 mt-3">
         <div class="row">
             <div class="col-6">
                 <!-- high scores button -->
-                <button id="view-scores" type="button" class="btn btn-secondary d-inline-block mt-1">Check High Scores</button>
+                <button id="view-scores" type="button" class="btn btn-secondary d-flex mt-1">Check High Scores</button>
             </div>
                 <!-- timer -->
-            <div class="col-6">
+            <div class="col-6" id="timer">
                 <p class="d-flex justify-content-end time">Time: 60s</p>
             </div>
         </div>
@@ -39,11 +39,11 @@
     <!-- Instructions -->
     <section id="welcome">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-9 welcome-box">
+        <div class="col-12 col-md-9 welcome-box pb-5">
             <h1 class="d-flex justify-content-center text-center"> JAVASCRIPT CODE QUIZ</h1>
             <p class="d-flex justify-content-center text-center">Hi there, and welcome to the JavaScript Code Quiz! </p>
             <p class="class="d-flex justify-content-center text-center">
-            You will have 60 seconds to complete the quiz. If you answer a question incorrectly, ten seconds will be removed from your time. You will receive one point for every second remaining in your timer. Answers cannot be changed after they are submitted, so choose carefully.</p>
+            You will begin with 60 seconds to complete the quiz. Answering correctly will add ten seconds to the timer, but if you answer a question incorrectly ten seconds will be removed. Your final score is your time remaining after all questions are answered or time runs out.</p>
             <p class="d-flex justify-content-center text-center">GOOD LUCK!</p>
             <button id="start" type="button" class="btn btn-success mx-auto d-block">Begin Quiz</button>
         </div>

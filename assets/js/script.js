@@ -162,7 +162,8 @@ function checkAnswer(event) {
   }, 1500);
 
   if (questions[questionCount].correctAnswer === event.target.value) {
-    p.textContent = "Correct!";
+    p.textContent = "Correct! 10 Seconds Added.";
+    secondsLeft = secondsLeft + 10;
   } else if (questions[questionCount].correctAnswer !== event.target.value) {
     secondsLeft = secondsLeft - 10;
     p.textContent = "Incorrect. 10 Seconds Deducted."
