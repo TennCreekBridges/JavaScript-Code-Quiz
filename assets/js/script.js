@@ -68,18 +68,13 @@ const questions = [
         correctAnswer: "2"
         },
     {
-         question: "How does a WHILE loop start?",
-         answers: ["a. while i = 1 to 10", "b. while (i <= 10)", "c. while(i <= 10; i++)", "d. while (i++ 10)"],
-        correctAnswer:  "3"
-        },
-    {
         question: "How does a FOR loop start?",
         answers: ["a. for (i = 0; i <= 5; i++)", "b. for (i <= 5; i++)", "c. for (i = 0; i <= 5)", "d. for i = 1 to 5"],
         correctAnswer: "0"
         },
     {
         question: "What is the correct way to write a JavaScript array?",
-        answers: ["a. var colors = (1:\"red\", 2:\"green\", 3:\"blue\")", "b. var colors = 1 = (\"red\"), 2 = (\"green\"), 3 = (\"blue\")", "c. var colors = \"red\", \"green\", \"blue\"", "d. var colors=[\"red\", \"green\", \"blue\""],
+        answers: ["a. var colors = (1:\"red\", 2:\"green\", 3:\"blue\")", "b. var colors = 1 = (\"red\"), 2 = (\"green\"), 3 = (\"blue\")", "c. var colors = \"red\", \"green\", \"blue\"", "d. var colors=[\"red\", \"green\", \"blue\"]"],
         correctAnswer: "3"
         },
     {
@@ -113,6 +108,11 @@ const questions = [
         correctAnswer: "0"
         },
 ]
+// set visibility
+questionsEl.style.display = "none";
+completeEl.style.display = "none";
+highScoresEl.style.display = "none";
+
 
 // functions
 // begin quiz timer
@@ -168,6 +168,7 @@ function checkAnswer(event) {
     p.textContent = "Incorrect. 10 Seconds Deducted."
   }
 
+  // increase questions index
   if (questionCount < questions.length) {
     questionCount++;
   }
